@@ -1,0 +1,5 @@
+{
+    "name": "auto-embed-bunnycdn",
+    "description": "Automatically embed BunnyCDN content using WP_oEmbed.",
+    "version": "1.2"
+}

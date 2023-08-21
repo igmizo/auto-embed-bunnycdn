@@ -2,9 +2,13 @@
 /**
  * Plugin Name: Auto Embed BunnyCDN
  * Description: Automatically embed BunnyCDN content using WP_oEmbed.
- * Version: 1.1
+ * Version: 1.2
  * Author: Ivars Gmizo
  */
+
+ require("updater.php");
+
+ new gmzUpdateChecker('http://localhost:3000/api/update?plugin=auto-embed-bunnycdn');
 
  function register_bunnycdn_oembed_handler() {
     wp_embed_register_handler( 
