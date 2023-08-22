@@ -16,9 +16,10 @@ if (!class_exists('gmzUpdateChecker')) {
 
         public function __construct($remote_path)
         {
-
+            $enty_file = __DIR__ . "/" . plugin_basename(__DIR__) . ".php";
+            $plugin_data = get_plugin_data($enty_file);
             $this->plugin_slug = plugin_basename(__DIR__);
-            $this->version = '1.0';
+            $this->version = $plugin_data['Version'];
             $this->cache_key = "updater_" . md5(plugin_basename(__DIR__));
             $this->cache_allowed = false;
             $this->remote_path = $remote_path;
